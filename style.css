@@ -18,7 +18,7 @@ form{
     min-height: 20vh;
     display: flex;
     justify-content: center;
-   align-items: center;
+    align-items: center;
 }
 
 form > input, form > button{
@@ -57,7 +57,7 @@ form > button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .todo > li{
@@ -89,4 +89,17 @@ form > button:hover{
 .completed{
     text-decoration: line-through;
     opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/* beginning of responsiveness */
+
+@media screen and (min-widh: 500px) {
+    form{
+        width: 100%;
+    }
 }
