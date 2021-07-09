@@ -1,9 +1,11 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
+const filterOption = document.querySelector('#filter-todo');
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
+filterOption.addEventListener('click', filterTodo);
 
 function addTodo(event) {
 
@@ -57,4 +59,10 @@ function deleteCheck(e) {
 
         todo.classList.toggle("completed");
     }
+}
+function filterTodo(e) {
+    const todos = todoList.childNodes;
+    todos.forEach(function(todo){
+
+    });
 }
