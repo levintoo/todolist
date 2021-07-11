@@ -51,6 +51,8 @@ function deleteCheck(e) {
         })
         
     }
+    // add todo input to local storage
+    saveLocalTodos(todoInput.value);
     //checkmark
     if(item.classList[0] === "complete-btn"){
         const todo = item.parentElement;
@@ -84,10 +86,11 @@ function filterTodo(e) {
 function saveLocalTodos(todo){
     // check local storage for todos
     let todos;
-    if(localStorage.getItem('todos') === null){
+    if (localStorage.getItem('todos') === null){
         todos = [];
     }else{
-        todos = JSOn.parse(localStorage.getItem('todos'));
+        todos = JSON.parse(localStorage.getItem('todos'));
     }
-    
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
