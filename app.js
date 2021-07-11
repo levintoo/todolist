@@ -56,3 +56,7 @@ function deleteCheck(e) {
         todo.classList.toggle('completed');
     }
 }
+
+function filterTodo(e) {
+    
+}
